@@ -21,9 +21,9 @@ from Model1 import create_model, ctc_loss, optimizer
 
 def main(_):
     
-    data_preprocess_params = {'batch_size': FLAGS.batch_size+5,
-                              'time_step': FLAGS.time_step_length+5, 
-                              'window_len': FLAGS.window_length+5,
+    data_preprocess_params = {'batch_size': FLAGS.batch_size,
+                              'time_step': FLAGS.time_step_length, 
+                              'window_len': FLAGS.window_length,
                               'n_mfcc' : FLAGS.n_mfcc, 
                               'n_classes': FLAGS.n_character
                               }

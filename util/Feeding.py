@@ -121,5 +121,25 @@ class DataGenerator(keras.utils.Sequence):
         return idx_vect
 
 
+#%% Test
+import numpy as np    
+    
+batch_X_before_window = np.zeros((32, 431, 30)) 
+  
+batch_X = np.zeros((32, 431, 3 * 30))
+
+for sample_idx in range(32): 
+    
+    tmp_x = np.random.rand(200, 30)
+    tmp_x_shape0 = tmp_x.shape[0]     
+        
+    batch_X_before_window[sample_idx, :tmp_x_shape0,] = tmp_x
+    
+    window_num = 431 - 3 + 1
+    
+    for window_idx in range(window_num):
+        batch_X[sample_idx, window_idx, :] =\
+            batch_X_before_window[sample_idx, window_idx: window_idx+3, :].reshape(3 * 30) 
+
 
 
