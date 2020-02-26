@@ -10,7 +10,6 @@ The main code for training DeepSpeech with keras.
 
 """
 
-
 import keras
 from util.Feeding import DataGenerator
 from util.Flags import create_flags, FLAGS
@@ -55,7 +54,7 @@ def main(_):
     model.fit_generator(generator=train_generator,
                         validation_data=dev_generator,
                         use_multiprocessing=False,
-                        epochs=10,
+                        epochs=FLAGS.epochs,
                         )
     
     

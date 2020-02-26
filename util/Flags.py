@@ -32,13 +32,14 @@ def create_flags():
     f.DEFINE_string('alphabet_path', "data/CV_EN/alphabet.txt", 'the file path of Alphabet.')
     
     
-    f.DEFINE_integer('time_step_length', 431, "the max time step length for one sample.")
+    f.DEFINE_integer('time_step_length', 432, "the max time step length for one sample. default 432")
     f.DEFINE_integer('window_length', 3, "the length of each time window.")
     f.DEFINE_integer('n_mfcc', 30, "the number of the MFCCs")
     f.DEFINE_integer('n_character', 28, "The number of chracters in alphabet")
     
 
     # Net work parameter
+    f.DEFINE_integer('epochs', 30, "The number of epochs")
     f.DEFINE_integer('batch_size', 5, "Batch size for training")
     f.DEFINE_integer('n_hidden', 1024, "the number of hidden unit in Dense layer.")
     f.DEFINE_float('dropout', 0.05, "the number of dropout rate. in each layer.")
