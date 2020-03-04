@@ -33,7 +33,7 @@ wget https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amaz
 
 4.unpack the data en.tar.gz
 ```
-tar xvzf file.tar.gz
+tar xvzf en.tar.gz
 ```
 
 5.go back to the main folder and run the program
