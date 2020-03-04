@@ -80,7 +80,7 @@ class DataGenerator(keras.utils.Sequence):
         # there is a zero masking in the first layer. 
         batch_X = np.zeros((self.batch_size, self.n_window, self.window_len * self.n_mfcc))
         # using the n_class as the null label for CTC LOSS
-        batch_y = np.ones((self.batch_size, self.time_step), dtype=int)*self.n_classes
+        batch_y = np.ones((self.batch_size, self.time_step), dtype=float)*self.n_classes
     
         for sample_idx in range(self.batch_size):
              # x

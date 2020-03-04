@@ -57,8 +57,6 @@ def main(_):
                         epochs=FLAGS.epochs,
                         )
     
-    
-    
 if __name__ == "__main__":
     create_flags()
     absl.app.run(main)

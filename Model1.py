@@ -54,7 +54,7 @@ def create_model():
     # build model 
     model = Sequential()
     
-    model.add(Masking(mask_value=0., input_shape=(time_step_len, window_len*n_mfcc)))
+    model.add(Masking(mask_value= float(FLAGS.n_character) , input_shape=(time_step_len, window_len*n_mfcc)))
     model.add(TimeDistributed(Dense(n_hidden, activation='relu', input_dim=(window_len* n_mfcc), )))
     model.add(TimeDistributed(Dropout(rate_dropout)))
     
