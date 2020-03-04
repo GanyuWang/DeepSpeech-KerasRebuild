@@ -18,6 +18,12 @@ all of the parameter of the project util/Flags.py
 
 ## Easy implement step. 
 
+0.requirement
+```
+pip install -r requirements.txt
+```
+other requirement include ffmpeg, etc. 
+
 1.clone the project
 ```
 git clone https://github.com/WalterJohnson0/DeepSpeech-KerasRebuild.git
