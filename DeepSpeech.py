@@ -17,7 +17,8 @@ import absl.app
 
 import os
 
-from Model1 import create_model, ctc_loss, optimizer
+#from Model1 import create_model, ctc_loss, optimizer
+from SimpleTestModel import create_model, ctc_loss, optimizer
 
 
 def main(_):
