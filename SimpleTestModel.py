@@ -53,7 +53,7 @@ def create_model():
     # build model 
     model = Sequential()
     
-    model.add(Masking(mask_value= float(FLAGS.n_character) , input_shape=(time_step_len, window_len*n_mfcc)))    
+    model.add(Masking(mask_value= float(0) , input_shape=(time_step_len, window_len*n_mfcc)))    
     # predict the null label of ctc loss
     model.add(TimeDistributed(Dense(n_class+1)))
     
