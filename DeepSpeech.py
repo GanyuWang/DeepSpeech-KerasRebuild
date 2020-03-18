@@ -35,7 +35,7 @@ def main(_):
 
     # check point
     # Include the epoch in the file name (uses `str.format`)
-    checkpoint_path = "checkpoint1/model1-{epoch:04d}.ckpt"
+    checkpoint_path = "checkpoint/model1-{epoch:04d}.ckpt"
     #checkpoint_dir = os.path.dirname(checkpoint_path)
 
     # Create a callback that saves the model's weights every 5 epochs
@@ -45,7 +45,7 @@ def main(_):
                                                 save_weights_only=True,
                                                 period=1)
     
-    early_stoping_callback = keras.callbacks.EarlyStopping(monitor='val_loss', patience=2, verbose=0)
+    early_stoping_callback = keras.callbacks.EarlyStopping(monitor='loss', patience=2, verbose=0)
     
     
     # model
